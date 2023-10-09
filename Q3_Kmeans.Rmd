@@ -80,4 +80,4 @@ clusplot(iris_1[, c("Sepal.Length", "Sepal.Width")],
          xlab = 'Sepal.Length', 
          ylab = 'Sepal.Width') 
 ```
-
+# Code contriubuted by Manja
