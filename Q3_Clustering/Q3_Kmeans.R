@@ -22,7 +22,7 @@ iris_1 <- iris[, -5]
 set.seed(240) # Setting seed 
 kmeans.re <- kmeans(iris_1, centers = 3, nstart = 20) 
 kmeans.re 
-  
+
 # Cluster identification for  
 # each observation 
 kmeans.re$cluster 
@@ -32,9 +32,6 @@ cm <- table(iris$Species, kmeans.re$cluster)
 cm 
 
 # Model Evaluation and visualization 
-plot(iris_1[c("Sepal.Length", "Sepal.Width")]) 
-plot(iris_1[c("Sepal.Length", "Sepal.Width")],  
-     col = kmeans.re$cluster) 
 plot(iris_1[c("Sepal.Length", "Sepal.Width")],  
      col = kmeans.re$cluster,  
      main = "K-means with 3 clusters") 
