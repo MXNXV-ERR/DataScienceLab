@@ -33,7 +33,8 @@ cm
 
 # Model Evaluation and visualization 
 plot(iris_1[c("Sepal.Length", "Sepal.Width")],  
-     col = kmeans.re$cluster,  
+     col = kmeans.re$cluster,
+     pch=19,
      main = "K-means with 3 clusters") 
 
 ## Plotiing cluster centers 

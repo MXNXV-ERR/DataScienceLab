@@ -5,13 +5,6 @@ install.packages("dplyr")
 install.packages("caTools") 
  
 # For ROC curve to evaluate model
-install.packages("ROCR")
-# Installing the package
- 
-# For Logistic regression
-install.packages("caTools") 
- 
-# For ROC curve to evaluate model
 install.packages("ROCR") 
 
  

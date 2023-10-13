@@ -1,18 +1,18 @@
+# Installing Packages 
+install.packages("arules") 
+install.packages("arulesViz") 
+
+# Loading package 
+library(arules) 
+library(arulesViz) 
+
 # Loading data 
 dataset = read.transactions('Market_Basket_Optimisation.csv', 
-						sep = ', ', rm.duplicates = TRUE) 
+						sep = ',', rm.duplicates = TRUE) 
 
 # Structure 
 str(dataset) 
 
-# Installing Packages 
-install.packages("arules") 
-install.packages("arulesViz") 
-  
-# Loading package 
-library(arules) 
-library(arulesViz) 
-  
 # Fitting model 
 # Training Apriori on the dataset 
 set.seed = 220 # Setting seed 
