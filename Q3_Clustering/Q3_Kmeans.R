@@ -1,39 +1,22 @@
----
-title: "R Notebook"
-output: html_notebook
----
-```{r}
+# Installing Packages 
+install.packages("ClusterR") 
+install.packages("cluster")
+
+# Loading package 
+library(ClusterR) 
+library(cluster) 
+
 # Loading data 
 data(iris) 
 
 # Structure 
 str(iris)
-```
 
 
-```{r}
-# Installing Packages 
-install.packages("ClusterR") 
-install.packages("cluster")
-```
-
-
-```{r}
-# Loading package 
-library(ClusterR) 
-library(cluster) 
-```
-```{r}
 # Removing initial label of  
 # Species from original dataset
-```
-
-
-```{r}
 iris_1 <- iris[, -5] 
-```
 
-```{r}
 # Fitting K-Means clustering Model  
 # to training dataset 
 set.seed(240) # Setting seed 
@@ -43,14 +26,11 @@ kmeans.re
 # Cluster identification for  
 # each observation 
 kmeans.re$cluster 
-```
-```{r}
+
 # Confusion Matrix 
 cm <- table(iris$Species, kmeans.re$cluster) 
 cm 
-```
 
-```{r}
 # Model Evaluation and visualization 
 plot(iris_1[c("Sepal.Length", "Sepal.Width")]) 
 plot(iris_1[c("Sepal.Length", "Sepal.Width")],  
@@ -58,14 +38,11 @@ plot(iris_1[c("Sepal.Length", "Sepal.Width")],
 plot(iris_1[c("Sepal.Length", "Sepal.Width")],  
      col = kmeans.re$cluster,  
      main = "K-means with 3 clusters") 
-```
-```{r}
+
 ## Plotiing cluster centers 
 kmeans.re$centers 
 kmeans.re$centers[, c("Sepal.Length", "Sepal.Width")] 
-```
 
-```{r}
 ## Visualizing clusters 
 y_kmeans <- kmeans.re$cluster 
 clusplot(iris_1[, c("Sepal.Length", "Sepal.Width")], 
@@ -79,5 +56,5 @@ clusplot(iris_1[, c("Sepal.Length", "Sepal.Width")],
          main = paste("Cluster iris"), 
          xlab = 'Sepal.Length', 
          ylab = 'Sepal.Width') 
-```
+
 # Code contriubuted by Manja

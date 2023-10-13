@@ -1,16 +1,6 @@
-
----
-title: "R Notebook"
-output:
-  pdf_document: default
-  html_notebook: default
----
-{r}
-
-```{r}
-install.packages("dpp")
 # Installing the package
 install.packages("dplyr")
+
 # For Logistic regression
 install.packages("caTools") 
  
@@ -23,34 +13,17 @@ install.packages("caTools")
  
 # For ROC curve to evaluate model
 install.packages("ROCR") 
-```
 
-
-
-
-
-
-
-
-```{r}
-    # Loading package
+ 
+# Loading package
 library(dplyr)
+ 
 # Summary of dataset in package
 summary(mtcars)
      
 # Loading package
 library(caTools)
-library(ROCR)
-
-
-
-     
-     
-# Loading package
-library(caTools)
-library(ROCR)
-
-
+library(ROCR)     
 
 # Splitting dataset
 split <- sample.split(mtcars, SplitRatio = 0.8)
@@ -68,11 +41,10 @@ logistic_model
 # Summary
 summary(logistic_model)
 
-
 predict_reg <- predict(logistic_model,
                        test_reg, type = "response")
 predict_reg
-
+  
 # Changing probabilities
 predict_reg <- ifelse(predict_reg >0.5, 1, 0)
  
@@ -101,8 +73,3 @@ abline(a = 0, b = 1)
  
 auc <- round(auc, 4)
 legend(.6, .4, auc, title = "AUC", cex = 1)
-
-```
- 
-
-
