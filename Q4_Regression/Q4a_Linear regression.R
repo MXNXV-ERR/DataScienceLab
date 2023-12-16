@@ -43,5 +43,5 @@ ggplot() +
 
   ggtitle('Salary vs Experience (Training set)') +
   xlab('Years of experience') +
-  ylab('Salary') +
+  ylab('Salary') 
 #red train , orange test points
