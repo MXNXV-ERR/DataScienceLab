@@ -12,4 +12,5 @@ data<-Groceries
 rules<-apriori(data,parameter=list(support=0.0004,confidence=0.2))
 
 itemFrequencyPlot(data,topN=10)
-plot(rules,method="grouped")
+plot(rules,method = "graph",  
+     measure = "confidence", shading = "lift")

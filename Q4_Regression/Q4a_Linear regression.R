@@ -32,23 +32,16 @@ ypred = predict(lm.r, newdata = testset)
 
 library(ggplot2)
 
-# Visualising the Training set results
+# Visualising the Training set and test set results
 ggplot() + 
   geom_point(aes(x = trainingset$Years_Ex, y = trainingset$Salary), 
-            colour = 'red') +
+             colour = 'red') +
+  geom_point(aes(x = testset$Years_Exp, y = testset$Salary),
+             colour = 'orange') +
   geom_line(aes(x = trainingset$Years_Ex,y = predict(lm.r, newdata = trainingset)), 
             colour = 'blue') +
+
   ggtitle('Salary vs Experience (Training set)') +
   xlab('Years of experience') +
-  ylab('Salary')
-
-# Visualising the Test set results
-ggplot() +
-  geom_point(aes(x = testset$Years_Exp, y = testset$Salary),
-             colour = 'red') +
-  geom_line(aes(x = trainingset$Years_Exp,
-                y = predict(lm.r, newdata = trainingset)), 
-            colour = 'blue') +
-  ggtitle('Salary vs Experience (Test set)') +
-  xlab('Years of experience') +
-  ylab('Salary')
+  ylab('Salary') +
+#red train , orange test points

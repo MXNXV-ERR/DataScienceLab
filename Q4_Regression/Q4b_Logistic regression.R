@@ -1,23 +1,19 @@
 # Installing the package
 install.packages("dplyr")
-
 # For Logistic regression
 install.packages("caTools") 
- 
 # For ROC curve to evaluate model
 install.packages("ROCR") 
 
- 
 # Loading package
 library(dplyr)
- 
-# Summary of dataset in package
-summary(mtcars)
      
 # Loading package
 library(caTools)
 library(ROCR)     
 
+# Summary of dataset in package
+summary(mtcars)
 # Splitting dataset
 split <- sample.split(mtcars, SplitRatio = 0.8)
 split

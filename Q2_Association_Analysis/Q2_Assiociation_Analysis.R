@@ -7,7 +7,7 @@ library(arules)
 library(arulesViz) 
 
 # Loading data 
-dataset = read.transactions('Market_Basket_Optimisation.csv', 
+dataset = read.transactions('Q2_Association_Analysis\\Market_Basket_Optimisation.csv', 
 						sep = ',', rm.duplicates = TRUE) 
 
 # Structure 
