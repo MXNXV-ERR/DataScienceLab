@@ -1,0 +1,14 @@
+1. Write a program to implement Random Forest using any data sets
+
+2. Write a program to demonstrate association analysis
+
+3. Implement any clustering technique.
+
+4. Implement linear and logistic regression.
+
+5. Implement a Map reduce program that processes a weather data set.
+
+6. Data analytics: write a program that transposes the original data set, find all pairs
+products reviewed together; Writes on the output folder all the pairs of products that
+appear more than once and their frequencies. The pairs of products must be sorted by
+frequency.
