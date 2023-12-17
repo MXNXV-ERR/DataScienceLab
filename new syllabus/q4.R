@@ -5,7 +5,7 @@ data <- data.frame(
   y=c(10,5,4,8,5,4,2,9,9)
 )
 
-d_mat <- dist(mtcars,method = "euclidean")
+d_mat <- dist(data,method = "euclidean")
 d_mat
 model <- hclust(d_mat,method = "average")
 summary(model)
