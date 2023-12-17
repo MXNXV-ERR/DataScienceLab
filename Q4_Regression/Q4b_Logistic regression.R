@@ -7,10 +7,9 @@ install.packages("ROCR")
 
 # Loading package
 library(dplyr)
-     
 # Loading package
 library(caTools)
-library(ROCR)     
+library(ROCR)
 
 # Summary of dataset in package
 summary(mtcars)
